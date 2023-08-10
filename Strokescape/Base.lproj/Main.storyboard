@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xG0-sv-od3" customClass="Canvas" customModule="DrawingApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="gUf-k0-eFB">
+                                        <rect key="frame" x="10" y="806.66666666666663" width="373" height="35.333333333333371"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQd-co-EZJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="60.666666666666664" height="35.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="undo"/>
+                                                <connections>
+                                                    <action selector="undoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Le3-4L-kx6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amo-7z-d1J">
+                                                <rect key="frame" x="62.666666666666671" y="0.0" width="60.333333333333329" height="35.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="redo"/>
+                                                <connections>
+                                                    <action selector="redoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eKF-6X-AfU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juE-EB-BOe">
+                                                <rect key="frame" x="125.00000000000001" y="0.0" width="60.666666666666671" height="35.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="bin"/>
+                                                <connections>
+                                                    <action selector="clearAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gU8-mI-0Dg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aF5-Kf-Tcw">
+                                                <rect key="frame" x="187.66666666666666" y="0.0" width="60.333333333333343" height="35.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="eraser"/>
+                                                <connections>
+                                                    <action selector="eraserAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rWs-EQ-Ntv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f92-jR-Rww">
+                                                <rect key="frame" x="249.99999999999997" y="0.0" width="60.666666666666657" height="35.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="diagonal-line"/>
+                                                <connections>
+                                                    <action selector="lineAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T7p-ga-Cvr"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A86-hK-FgX">
+                                                <rect key="frame" x="311.66666666666669" y="0.0" width="0.0" height="35.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="multi-line"/>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qol-8J-DBQ">
+                                                <rect key="frame" x="312.66666666666669" y="0.0" width="60.333333333333314" height="35.333333333333336"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlQ-9v-UPh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="35.333333333333336"/>
+                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="inkColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="clw-RN-LmJ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjK-OD-G3a">
+                                                        <rect key="frame" x="20" y="0.0" width="20.333333333333329" height="35.333333333333336"/>
+                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="inkColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rsf-Wk-IWq"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uJ-zV-e3T">
+                                                        <rect key="frame" x="40.333333333333314" y="0.0" width="20" height="35.333333333333336"/>
+                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="inkColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KGk-uc-MNG"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gUf-k0-eFB" secondAttribute="trailing" constant="10" id="Mup-5X-OLl"/>
+                                    <constraint firstItem="gUf-k0-eFB" firstAttribute="leading" secondItem="xG0-sv-od3" secondAttribute="leading" constant="10" id="WeR-wJ-WQ2"/>
+                                    <constraint firstAttribute="bottom" secondItem="gUf-k0-eFB" secondAttribute="bottom" constant="10" id="mj4-S2-6Jm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xG0-sv-od3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2gL-5i-TSy"/>
+                            <constraint firstAttribute="bottom" secondItem="xG0-sv-od3" secondAttribute="bottom" id="KSN-Tt-Fjf"/>
+                            <constraint firstItem="xG0-sv-od3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qG8-Aq-b1l"/>
+                            <constraint firstItem="xG0-sv-od3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yLF-Ze-e1J"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="canvasView" destination="xG0-sv-od3" id="H9M-K3-Wxl"/>
+                        <outlet property="clearButton" destination="juE-EB-BOe" id="kmD-WC-tQb"/>
+                        <outlet property="eraserButton" destination="aF5-Kf-Tcw" id="ZCB-XV-2Bo"/>
+                        <outlet property="lineButton" destination="f92-jR-Rww" id="GER-d7-RR1"/>
+                        <outlet property="redoButton" destination="amo-7z-d1J" id="avV-PU-g86"/>
+                        <outlet property="undoButton" destination="ZQd-co-EZJ" id="KI0-uU-JVV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34.351145038167935" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bin" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="diagonal-line" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="eraser" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="multi-line" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="redo" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="undo" width="21.333333969116211" height="21.333333969116211"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
