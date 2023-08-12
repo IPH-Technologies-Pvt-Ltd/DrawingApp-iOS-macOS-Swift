@@ -29,10 +29,10 @@ https://github.com/IPH-Technologies-Pvt-Ltd/DrawingApp-iOS-macOS-Swift/assets/13
 Strokescape allows you to effortlessly create beautiful drawings by tracking the movement of your finger. As you move your finger across the screen, the app responds in real-time, letting you draw smooth and dynamic lines.
 
 ## Draw Line
-For precision and accuracy, DrawMaster includes a straight-line drawing feature. Simply activate this option, and you'll be able to draw perfectly straight lines with ease. This is particularly useful for technical drawings and clean designs.
+For precision and accuracy, Strokescape includes a straight-line drawing feature. Simply activate this option, and you'll be able to draw perfectly straight lines with ease. This is particularly useful for technical drawings and clean designs.
 
 ## Undo and Redo
-Mistakes happen, and that's why DrawMaster includes an undo and redo functionality. If you're not satisfied with a stroke or change your mind, simply use the undo feature to step back in time. And if you change your mind about your undo action, the redo feature has your back.
+Mistakes happen, and that's why Strokescape includes an undo and redo functionality. If you're not satisfied with a stroke or change your mind, simply use the undo feature to step back in time. And if you change your mind about your undo action, the redo feature has your back.
 
 ## Eraser
 Correcting errors is a breeze with the built-in eraser tool. Choose the eraser from the tool palette, and you can easily remove unwanted lines or marks from your drawing. Keep your creations looking polished and professional.
