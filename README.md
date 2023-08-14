@@ -23,7 +23,8 @@ With its seamless finger movement tracking, precision-driven straight line drawi
 __Here is a quick preview of the app__ <br />
 `Mac`<br />
 
-https://github.com/IPH-Technologies-Pvt-Ltd/DrawingApp-iOS-macOS-Swift/assets/130062285/d27bf358-c034-4337-b18b-4ed9b6769044
+https://github.com/IPH-Technologies-Pvt-Ltd/DrawingApp-iOS-macOS-Swift/assets/130062285/9de1d52b-6912-4e11-9a3e-8d2b498eba81
+
 
 ## Finger Movement Tracking and Line Drawing
 Strokescape allows you to effortlessly create beautiful drawings by tracking the movement of your finger. As you move your finger across the screen, the app responds in real-time, letting you draw smooth and dynamic lines.
