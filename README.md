@@ -21,7 +21,6 @@ With its seamless finger movement tracking, precision-driven straight line drawi
 
 
 __Here is a quick preview of the app__ <br />
-`Mac`<br />
 
 https://github.com/IPH-Technologies-Pvt-Ltd/DrawingApp-iOS-macOS-Swift/assets/130062285/9de1d52b-6912-4e11-9a3e-8d2b498eba81
 
