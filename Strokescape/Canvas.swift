@@ -16,6 +16,8 @@ class Canvas: UIView{
     var endPoint = CGPoint()
     var id = false
     
+    var multiLineIdentifier = false
+    
     func undo(){
         if lines.count != 0{
             let last = lines.popLast()
@@ -61,13 +63,18 @@ class Canvas: UIView{
                 context.setLineCap(.round)
                 
                 for (i, p) in line.points.enumerated(){
-                    if i == 0{
-                        //begin line from specified point
-                        context.move(to: p)
-                    }
-                    else{
-                        //appends line
+                    if multiLineIdentifier{
+                        context.move(to: startPoint)
                         context.addLine(to: p)
+                    }else{
+                        if i == 0{
+                            //begin line from specified point
+                            context.move(to: p)
+                        }
+                        else{
+                            //appends line
+                            context.addLine(to: p)
+                        }
                     }
                 }
                 //paints a line along the given path
@@ -88,6 +95,25 @@ class Canvas: UIView{
                 //appending lines in lines array.
                 lines.append(Line.init(color: strokeColor, points: []))
             }
+        if multiLineIdentifier{
+            if let touch = touches.first {
+                let position = touch.location(in: self)
+                if id == true{
+                    startPoint = position
+                    // endPoint = position
+                    //lines.append(Line.init(color: strokeColor, width: strokeWidth, points: [startPoint, endPoint]))
+                    //lines.append(Line.init(color: strokeColor, width: strokeWidth, points: []))
+                    id = false
+                }
+                else{
+                   endPoint = position
+                   guard var lastLineAdded = lines.popLast() else{ return }
+//                    lastLineAdded.points[1] = endPoint
+                   lastLineAdded.points.append(endPoint)
+                   lines.append(lastLineAdded)
+               }
+            }
+        }
         setNeedsDisplay()
         }
     

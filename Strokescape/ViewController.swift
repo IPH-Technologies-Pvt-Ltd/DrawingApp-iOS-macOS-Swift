@@ -68,4 +68,10 @@ class ViewController: UIViewController {
         }
         canvasView.straightLineIdentifier = !canvasView.straightLineIdentifier
     }
+    
+    @IBAction func multiLineAction(_ sender: UIButton) {
+        print("you clicked multiLine Button!")
+        canvasView.multiLineIdentifier = !canvasView.multiLineIdentifier
+        canvasView.id = !canvasView.id
+    }
 }
